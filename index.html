@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+       
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Joueur 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Actuel</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+                <button id="playPauseBTN" onclick="playPause()" class="musicb"><img src="note-de-musique.png" class="Sound" alt="" height="40px"> &#9658;</button>
+                &nbsp;
+               
+            </div>
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Joueur 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Actuel</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+     
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>Nouvelle partie</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Rouler le dés</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Garder</button>
+            
+            <img src="img/die1.svg" alt="DICE" class="dice" id="dice1">
+            
+                <audio id="audio" loop="true">
+                    <source src="music.mp3" type="audio/mpeg">
+                </audio>
+            
+                
+          
+
+            <audio src="Looser.mp3" id="looserSong"></audio>
+
+            <audio src="des.wav" id="desmain"></audio>
+            
+        
+        <script src="app.js"></script>
+    </body>
+</html>
