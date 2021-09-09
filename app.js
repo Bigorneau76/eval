@@ -3,35 +3,34 @@
 var audios = document.getElementById('audio');
 var playPauseBTN = document.getElementById('playPauseBTN');
 var count = 0;
+var trans = document.getElementById('transition')
 
-function playPause(){
+function playPause  (){
 	if(count == 0){
 		count = 1;
-		audios.play();
-		playPauseBTN.innerHTML = img.src= "la-musique.png ,&#9208;";
-	}else{
+		 audios.play();
+        
+	} 
+    else{
 		count = 0;
 		audios.pause();
-		playPauseBTN.innerHTML =img.src= "la-musique.png ,&#9658;";
 	}
-
 }
 
-function stop(){
-	playPause()
-	audios.pause();
-	audios.currentTime = 0;
-	playPauseBTN.innerHTML = "Play &#9658;";
-}
 
 const audio = document.getElementById('desmain');
 
 audio.load();
-// ****************GAME***********************************
+
 document.querySelector('.btn-roll').addEventListener('click', e => {
-  audio.currentTime = 11;
-  audio.play();
-})
+    audio.currentTime = 11;
+    audio.play();
+  })
+  
+
+
+  
+// ****************GAME***********************************
 
 
 var scores, roundScore, activePlayer, gamePlaying;
@@ -48,8 +47,8 @@ let random = document.querySelectorAll("img");
 
 
 
-
 init();
+
 
 document.querySelector('.btn-roll').addEventListener('click',  function (){   
     if(gamePlaying) {
@@ -75,8 +74,6 @@ document.querySelector('.btn-roll').addEventListener('click',  function (){
                 } else {
                     const looserSong = document.getElementById('looserSong')
                     looserSong.play()
-                    looserSong.currentTime=1;
-                    
                     nextPlayer();
                 }  
             };
@@ -163,8 +160,8 @@ function nextPlayer() {
 
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
+    document.getElementById('transition');
+    trans.play();
+    }
 
     
-
-
-}

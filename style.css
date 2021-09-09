@@ -1,95 +1,51 @@
-/**********************************************
-*** GENERAL
-**********************************************/
+/***********/
+/* GENERAL */
+/***********/
 
 * {
-    margin: 0;
+    margin: 30;
     padding: 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;   
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+@font-face {
+    font-family: BubbleShine;
+    src: url(BubbleShine.otf);
 }
 
-body
-{
-    background-image: url(cartoonfd.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
+body{    
     font-family: 'BubbleShine';
-    font-weight: 240;
-    height: 100vh;
-    position: relative;
+    font-weight: 300;
   
-   
-   
- 
+    color: rgb(7, 7, 7);
 }
-.wrapper
-.wrapper {  
-    width: 80vw;
-    position:relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff; 
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    
-  
 
+/* Wrapper */
+  .wrapper {
+   background-image: url(img/cartoonfd.jpg);
+   background-size: cover;
+   background-repeat: no-repeat ;
+   display: flex;
 }
+
+/* Panels */
 .player-0-panel,
 .player-1-panel {
     width: 50%;
     float: left;
     height: 600px;
     padding: 100px;
-     margin-top: 30px;
-    border-radius: 45%;
-    
 }
 
-
-.Sound{
-    width: 30px;
-    height: 30px; 
-    border-radius: 50%;
-    background: #000;
-    box-shadow: 0 0 0 0 #000;
-    animation: pulse 1.3s infinite;
-   
-} 
-
-/* .pulse{
-    animation: pulse 1.3s infinite;
-} */
-@keyframes pulse {
-    to {
-        box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.01);
-    }
-} 
-
-
-
-
-
-
-
-
-
-/**********************************************
-*** PLAYERS
-**********************************************/
-@font-face {
-    font-family:'BubbleShine';
-    src: url(BubbleShine.ttf) format('truetype');
+.col-sm-5{
+    width:50%;
+    height: auto;
 }
+
+/***********/
+/* PLAYERS *
+/***********/
+
 .player-name {
     font-size: 40px;
     text-align: center;
@@ -98,28 +54,30 @@ body
     font-weight: 100;
     margin-top: 20px;
     margin-bottom: 10px;
-    position:relative;
-    font-family: 'BubbleShine';
-
+    position: relative;
 }
 
 .player-score {
     text-align: center;
-    font-size: 80px;
+    font-size: 55px;
     font-weight: 100;
     color: #EB4D4D;
     margin-bottom: 130px;
 }
 
-/* .active { background-color: #f7f7f7; } */
+.active { border: #eed7d7 solid; 
+    filter: drop-shadow(2px 4px 6px black);
+    
+}
 .active .player-name { font-weight: 300; }
+
 
 .active .player-name::after {
     content: "\2022";
     font-size: 47px;
     position: absolute;
     color: #EB4D4D;
-    top: -7px;
+    top: -25px;
     right: 10px;
     
 }
@@ -127,51 +85,56 @@ body
 .player-current-box {
     background-color: #EB4D4D;
     color: #fff;
-    width: 40%;
-    margin: 0  auto;
-    padding: 12px;
+    margin: 0 auto;
     text-align: center;
-    
-    
+   
+}
+@media screen and (min-width: 768){
+    .player-current-box
+    .col-md-6{
+        width: 120%;
+    }
     
 }
+
 
 .player-current-label {
     text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 26px;
+    margin-bottom: 8px;
+    font-size: 23px;
     color: #222;
+    text-align: center;
 }
 
 .player-current-score {
-    font-size: 30px;
+    font-size: 35px;
 }
 
+/* Buttons */
 button {
     position: absolute;
     width: 200px;
     left: 50%;
     transform: translateX(-50%);
-    color: rgb(0, 0, 0);
+    color: rgb(5, 5, 5);
     background: none;
     border: none;
     font-family: 'BubbleShine';
-    font-size: 30px;
+    font-size: 25px;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 300;
     transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover { font-weight: 600; 
- animation: none; 
-left: 50%;}
+button:hover { font-weight: 600; }
 button:hover i { margin-right: 20px; }
 
 button:focus {
     outline: none;
 }
 
+/* Icons */
 i {
     color: #EB4D4D;
     display: inline-block;
@@ -183,10 +146,12 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
+/* Specific buttons */
+.btn-new { top: 60px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
+/* Dice images */
 .dice {
     position: absolute;
     left: 50%;
@@ -196,36 +161,32 @@ i {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
+#dice1 { top: 210px; }
+
+
+/* Winner status */ 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
 
+/* Winning score input */
+#winningScore {
+    position: absolute;
+    top: 520px;
+    left: 50%;
+    text-transform: uppercase; 
+    color: #555;
+    font-size: 18px;
+    font-family: 'BubbleShine';
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    transform: translateX(-50%);
+}
 
+#winningScore:focus { outline: none; }
 
-
-    
-/* @media screen and (min-width: 200px) and (max-width: 640px) {
-   
-    .player-0-panel
-    .player-1-panel
-    
-     { 
-        float:none;
-     
-    }
-}  */
-
-
-  /* @media (max-width: 800px){
-
-    .player-0-panel
-    .player-1-panel{
-        width:100%;
-        
-    }
-  } */
-
-
-  .shake{
+/* **********ANIMATIONS********************** */
+.shake{
     animation: shake 0.5s infinite;
 }
 @keyframes shake{
@@ -258,20 +219,35 @@ i {
         transform: rotate(4deg);
     }
 }
-
+/*BUTTON SOUND,SONG DETAILS************/
 .musicb{
 	cursor: pointer;
-	color: rgb(27, 8, 8);
-	border-radius: 5px;
-	border:0px;
-	height: 35px;
-  
-    
+	left:70%;
+	height: 35px; 
+    pointer-events: all;
+    top: 10%;
+    position: absolute;
 }
+
+ .Sound{
+    width: 30px;
+    height: 30px; 
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 0 0 #000;
+    
+} 
+
+ .pulse{
+    animation: pulse 1.3s infinite;
+} 
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.01);
+    }
+} 
 
 .btn-roll{
     animation: boum 3s infinite;
     left: 45%;
 }
-
-
