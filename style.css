@@ -227,6 +227,7 @@ i {
     pointer-events: all;
     top: 10%;
     position: absolute;
+    z-index: 2;
 }
 
  .Sound{
