@@ -2,21 +2,45 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
         <link type="text/css" rel="stylesheet" href="style.css">
         
-        <title>Pig Game</title>
+        <title>No ONE</title>
     </head>
 
     <body>
+        <header class="container-sm">
+            <h1 class="d-flex justify-content-center">No One</h1>
+            <button id="playPauseBTN" onclick="playPause()" class="musicb d-inline-flex"><img src="img/note-de-musique.png" class="Sound" alt="" height="40px"> &#9658;</button>
+            &nbsp;
+            <a href="#modal" class="rules d-inline-flex">Régles</a>
+            
+            <div id="modal" class="modal">
+                <div class="modal-content">
+               
+          <p> <strong>1</strong>  Il y a deux joueurs. Le premier joueur lance le dé, le chiffre sur la face du dé est automatiquement enregistré dans la <span>mise aactuel</span>. Le joueur peut relancer le dé autant de fois qu'il souhaite et sa<span>mise actuel</span> augmente.</p>
+          <br>
+          <p><strong>2</strong>   En revanche, si le dé fait un score de 1, le joueur perd tout ses points placés dans la <span>mise actuel</span> et c'est au tour de l'autre joueur.</p>
+          <br>
+          <p><strong>3</strong>   A tout moment, le joueur peut sécuriser ses points gagnés en cliquant sur le bouton <span>garder</span>. Ses points sont alors transférés dans le <span>score acquis</span> et c'est au tour de l'autre joueur de lancer le dé.</p>
+          <br>
+          <p><strong>4</strong>   Le vainqueur est le premier joueur à atteindre un <span>score acquis</span> ou une <span>mise actuel</span> de 100.
+          </p>
+          <a href="#" class="modal_close">&times;</a>
+                </div>
+            </div>
+            
+        </header>
        
-        <div class="wrapper clearfix  container-sm d-flex">
+        <div class="wrapper clearfix  d-sm-flex justify-content-center">
+            
             <div class="player-0-panel active d-flex">
                 <div class="col-md-5">
-                <div class="player-name inline-flex" id="name-0">Joueur 1</div>
+                <div class="player-name d-sm-inline-flex" id="name-0">Joueur 1</div>
                 <div class="player-score" id="score-0">43</div>
                 <div class="player-current-box" >
                     <div class="player-current-label ">Mise Actuel</div>
@@ -24,17 +48,12 @@
                 </div>
             </div>
             </div>
-                <button id="playPauseBTN" onclick="playPause()" class="musicb"><img src="img/note-de-musique.png" class="Sound" alt="" height="40px"> &#9658;</button>
-                &nbsp;
                
-        
-        
             <div class="player-1-panel  d-flex">
-                <div class="col-md-5">
-                <div class="player-name inline-flex" id="name-1">Joueur 2</div>
-                
-                <div class="player-score" id="score-1">72</div>
-                <div class="player-current-box">
+            <div class="col-md-5">
+               <div class="player-name d-sm-inline-flex" id="name-1">Joueur 2</div>
+                  <div class="player-score" id="score-1">72</div>
+                  <div class="player-current-box">
                     <div class="player-current-label">Mise Actuel</div>
                     <div class="player-current-score" id="current-1">0</div>
                 </div>
@@ -44,12 +63,16 @@
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>Nouvelle partie</button>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Rouler le dés</button>
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Garder</button>
-            
-              <img src="img/die1.svg" alt="DICE" class="dice" id="dice1">
-                 <audio id="audio" loop="true">
-                 <source src="sound/fmt.mp3" type="audio/mpeg">
+              <img src="img/die1.svg" alt="DICE" class="dice " id="dice1">
                 
-                </audio>
+              
+              
+              
+              
+    <audio id="audio" loop="true">
+     <source src="sound/fmt.mp3" type="audio/mpeg">
+                
+    </audio>
     <audio src="sound/transition.wav" id="transition"></audio>
         
     <audio src="sound/Looser.mp3" id="looserSong"></audio>

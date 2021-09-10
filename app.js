@@ -49,7 +49,7 @@ let random = document.querySelectorAll("img");
 
 init();
 
-
+// ********ROLL DICE********
 document.querySelector('.btn-roll').addEventListener('click',  function (){   
     if(gamePlaying) {
         var dice =  Math.floor(Math.random() *6+1);
@@ -81,7 +81,7 @@ document.querySelector('.btn-roll').addEventListener('click',  function (){
       
     
 
-
+// ********BTN HOLD*********
 
 document.querySelector('.btn-hold').addEventListener('click', function() {
     
@@ -113,7 +113,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     }
 });
 
-    
+// ********BTN NEW AND INIT FUNCTION********
 
 document.querySelector(".btn-new").addEventListener('click', init);
 
@@ -135,8 +135,7 @@ function init() {
   document.getElementById('current-1').textContent = '0'; 
 
 
-//   document.getElementById('name-0').textContent = 'Joueur 1';
-//   document.getElementById('name-1').textContent = 'Joueur 2'; 
+
   document.querySelector('.player-0-panel').classList.remove('winner');
   document.querySelector('.player-1-panel').classList.remove('winner');
 
