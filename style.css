@@ -16,6 +16,7 @@
 body{    
     font-family: 'BubbleShine';
     font-weight: 300;
+    width: 1000px;
   
     color: rgb(7, 7, 7);
 }
@@ -289,7 +290,7 @@ i {
    display: flex;
     position: absolute;
     z-index: 2;
-    left: 20%;
+    left: 30%;
     width: 0px;
    
 } 
