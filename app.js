@@ -65,7 +65,7 @@ document.querySelector('.btn-roll').addEventListener('click',  function (){
                 });
                 document.querySelector(".dice").setAttribute("src", images[dice]);
             },
-            1000
+            500
             );
                 if(dice !== 1) {       
                    
