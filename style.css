@@ -24,11 +24,18 @@ body{
 
 /* Wrapper */
   .wrapper {
-   background-image: url(img/cartoonfd.jpg);
+   background-image: url(img/cartoon4.jpg);
    background-size: cover;
    background-repeat: no-repeat ;
    display: flex;
 }
+
+.wrapper1 {
+    background-image: url(img/cartoon3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    display: flex;
+ }
 
 /* Panels */
 .player-0-panel,
