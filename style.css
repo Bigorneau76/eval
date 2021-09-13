@@ -39,10 +39,10 @@ body{
     padding: 100px;
 }
 
-.col-sm-5{
+ .col-sm-5{
     width:50%;
     height: auto;
-}
+} 
 
 
 
@@ -189,7 +189,7 @@ i {
     border-radius: 4px;
      position: relative; 
     width: 500px;
-    max-width: 90%;
+    max-width: 120%;
     background: rgb(134, 199, 218);
     padding: 1.5em 2em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
